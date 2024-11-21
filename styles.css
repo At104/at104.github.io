@@ -1,0 +1,333 @@
+:root {
+  --text-color: #1a1c20;
+  --link-color: #4a76ee;
+  --background-color: #eeeff1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Geist Mono', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white; /* Adjust as needed */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+body {
+  padding-top: 80px; /* Adjust based on the height of your navbar */
+}
+
+nav .left a {
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav .right a {
+  color: var(--text-color);
+  margin: 0 10px;
+}
+
+nav .right a:last-child {
+  color: var(--background-color);
+  background-color: var(--text-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+nav .right a span {
+  margin-left: 5px;
+}
+
+/* SECTION 1: Intro */
+
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 50px 0;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.intro-section .text {
+  flex: 5;
+}
+
+.intro-section .text h2 {
+  font-size: 45px;
+}
+
+.intro-section .text .links {
+  margin-top: 25px;
+}
+
+.intro-section .text .links a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid var(--link-color);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: .1s;
+}
+
+.intro-section .text .links a:hover {
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+}
+
+.intro-section .headshot {
+  flex: 2;
+  display: flex;
+  justify-content: right;
+}
+
+.intro-section .headshot img {
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SECTION 2: Skills */
+.skills-section {
+  padding: 135px 50px 0px 50px;
+  margin-bottom: 100px;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
+.skills-section .text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-section .cells {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;
+}
+
+/* SECTION 3: Testimony */
+.about-me {
+  padding: 135px 50px 0px 50px;
+  margin-bottom: 100px;
+}
+
+.about-me h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.about-me .group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-me .group .person-details {
+  text-align: center;
+  flex: 2;
+}
+
+.about-me .group .person-details img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.about-me .group .person-details p {
+  font-weight: 600;
+}
+
+.about-me .group .person-details p:last-child {
+  font-weight: normal;
+}
+
+.about-me .group .text {
+  flex: 8;
+}
+
+.projects-section {
+  padding: 100px 50px 0px 50px;
+  margin-bottom: 100px;
+}
+
+.projects-section h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Adjust gap as needed */
+}
+.project {
+  flex: 1 1 45%; /* Allow projects to take up 45% of the container width */
+  max-width: 45%;
+  box-sizing: border-box;
+  text-align: center; /* Center align the content */
+  margin-bottom: 20px; /* Add some space between rows */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project .projects-container .projectone {
+  flex: 1 1 45%; /* Allow projects to take up 45% of the container width */
+  max-width: 45%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+  justify-content: right;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project .projects-container .projecttwo {
+  flex: 1 1 45%; /* Allow projects to take up 45% of the container width */
+  max-width: 45%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+  justify-content: left;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project img {
+  width: 100%; /* Make the image take up the full width of the project container */
+  height: auto; /* Maintain the aspect ratio */
+  border: 3px solid black; /* Add a distinct black border to the image */
+  box-sizing: border-box;
+  padding: 5px; /* Add some padding inside the border */
+  border-radius: 5px; /* Optional: Add rounded corners to the image */
+}
+
+.project p {
+  width: 100%; /* Make the paragraph take up the full width of the project container */
+  max-width: 400px; /* Ensure the paragraph does not exceed the width of the image */
+  margin-top: 10px;
+  text-align: center; /* Center align the text */
+  box-sizing: border-box;
+}
+
+
+
+@media (max-width: 850px) {
+  /* SECTION 1: Hero */
+  .intro-section .text h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 740px) {
+  /* SECTION 1: Hero */
+  .intro-section {
+    flex-direction: column-reverse;
+  }
+
+  .intro-section .headshot img {
+    width: 300px;
+  }
+
+  /* SECTION 3: Testimony */
+  .about-me {
+    text-align: center;
+  }
+
+  .about-me .group {
+    flex-direction: column;
+  }
+
+  /* SECTION 4: Contact */
+  .projects-section .group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  /* NAVBAR */
+  nav {
+    padding: 0 20px;
+  }
+
+  nav .right a {
+    font-size: 22px;
+  }
+
+  nav .right a:last-child {
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 0;
+  }
+
+  nav .right a span {
+    display: none;
+  }
+
+}
